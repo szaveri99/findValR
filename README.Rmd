@@ -1,0 +1,77 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+
+source("R/pow.R")
+```
+
+# findValR
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of findValR is to ...
+
+## Installation
+
+You can install the development version of findValR from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("szaveri99/findValR")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(findValR)
+## basic example code
+```
+
+## Usage
+
+A fairly common task when dealing with a number is the need to find the armstrong number.To find the armstrong number while loop and some extra varaibles are to be used this is what armstrong number code is written. 
+
+```{r}
+(n <- 153)
+sum = 0  
+while(n>0){
+
+    val = n%%10
+    sum = sum + pow(val,3)
+    n = n%/%10
+  }
+```
+
+The pow() is also a part of the findValR package.
+
+```{r}
+library(findValR)
+n = 3024
+find_armstrong(n)
+```
+
+Use `find_armstrong()` when the input is known to be a integer value.
+For safety, it will error if its input has character value , a negative value or number containing decimal.
+
+```{r}
+find_armstrong(n)
+y <- 3654
+find_armstrong(y)
+```
+
+
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
