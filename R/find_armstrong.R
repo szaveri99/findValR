@@ -1,4 +1,15 @@
+#' Find the Armstrong Number
+#'
+#' @param n an integer value
+#'
+#' @return an armstrong number
+#' @export
+#'
+#' @examples
+#' n <- 153
+#' find_armstrong(n)
 find_armstrong <- function(n){
+  stopifnot(!is.character(n), n > 0)
   sum = 0
   temp = n
   a=0
